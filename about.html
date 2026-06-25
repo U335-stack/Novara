@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Novara Resort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="nav-container">
+    <a href="home.html" class="nav-logo">Novara<span>.</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="nav-login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <h1>About Novara</h1>
+  <p>Where Nepali tradition, comfort, and genuine hospitality come together.</p>
+</section>
+
+<!-- ══ ABOUT CONTENT ══ -->
+<section class="section">
+  <div class="section-inner">
+
+    <!-- About block -->
+    <div class="about-grid">
+      <img
+        src="https://pix8.agoda.net/property/288833/0/d3904a7e5259878456e4dcc3752e697b.jpeg?ce=0&s=1024x768"
+        alt="Novara Resort exterior"
+        class="about-img"
+      />
+      <div>
+        <span class="badge">Our Story</span>
+        <div class="divider"></div>
+        <h2 class="section-title">Novara Resort</h2>
+        <p class="section-sub">Founded in 2024 &nbsp;·&nbsp; Pokhara, Nepal</p>
+        <p style="color:#4A6A78;line-height:1.85;margin-bottom:16px;">
+         Novara Resort is inspired by the beauty of Pokhara and the warmth of Nepali hospitality.
+          Set beside Phewa Lake with stunning views of the Annapurna range, we offer a peaceful escape where nature, comfort, and 
+          unforgettable experiences come together.
+        </p>
+        <p style="color:#4A6A78;line-height:1.85;margin-bottom:24px;">
+         Over the past 2 years, we have welcomed guests from across Nepal and around the world,
+         creating memorable experiences in beautiful Pokhara.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="team-strip">
+      <h3 style="font-size:1.5rem;color:var(--teal);margin-bottom:4px;">Novara By The Numbers</h3>
+      <p style="color:#7A9BAB;font-size:.9rem;">Milestones that reflect our commitment to excellence.</p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Countries Represented</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">38</div>
+          <div class="stat-label">Dedicated Staff</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1×</div>
+          <div class="stat-label">National Luxury Award</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission and Vision -->
+    <div style="margin-top:72px;">
+      <div class="text-center" style="margin-bottom:36px;">
+        <span class="badge">Our Purpose</span>
+        <div class="divider" style="margin:12px auto 0;"></div>
+        <h2 class="section-title" style="margin-top:8px;">Mission &amp; Vision</h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card">
+          <h3> Our Mission</h3>
+          <p>
+            To create an immersive sanctuary where guests experience the finest in personalised hospitality, 
+            sustainable luxury, and cultural connection — leaving every visitor restored, inspired, and eager 
+            to return.
+          </p>
+        </div>
+        <div class="mv-card" style="border-left-color:var(--green);">
+          <h3> Our Vision</h3>
+          <p>
+           To be a landmark destination on the shores of Phewa Lake, where natural beauty, thoughtful luxury, and 
+           heartfelt hospitality create lasting memories for every guest.
+          </p>
+        </div>
+        <div class="mv-card" style="border-left-color:#E8A455;">
+          <h3> Our Values</h3>
+          <p>
+            We warmly welcome guests, care for the environment, maintain quality in every detail, celebrate local culture, and 
+            continuously improve the guest experience.
+          </p>
+        </div>
+        <div class="mv-card" style="border-left-color:#7B5EA7;">
+          <h3> Sustainability</h3>
+          <p>
+             Established in 2024, Novara Resort is built on a strong commitment to sustainability—powered by 60% solar energy, sourcing 80% of ingredients locally, and operating completely free of 
+             single-use plastics, preserving the natural beauty that surrounds us.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--CTA-->
+<section style="background:var(--ice);padding:64px 24px;text-align:center;">
+  <h2 style="font-size:2rem;color:var(--teal);margin-bottom:12px;">Come and experience Novara</h2>
+  <p style="color:#5A8A9A;max-width:480px;margin:0 auto 28px;">
+    Words can only say so much. Come and feel the difference.
+  </p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <button class="btn btn-primary" onclick="handleBookNow()">Book Your Stay</button>
+    <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Novara Resort</h3>
+      <p>A sanctuary of luxury and serenity, offering unforgettable experiences in breathtaking surroundings.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+061411255">📞 +061-411255</a></li>
+        <li><a href="tel:+9779749431787">📞 +977-9749431787</a></li>
+        <li><a href="mailto:welcome@novararesort.com">✉️ welcome@novararesort.com</a></li>
+        <li><a href="#">📍 Pokhara, Nepal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Novara Resort. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

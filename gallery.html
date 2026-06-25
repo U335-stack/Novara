@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Novara Resort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="nav-container">
+    <a href="home.html" class="nav-logo">Novara<span>.</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="nav-login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <h1>Resort Gallery</h1>
+  <p>A visual journey through Novara — our rooms, grounds, cuisine, and unforgettable moments.</p>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section class="section">
+  <div class="section-inner">
+
+    <!-- Filter tabs -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;justify-content:center;">
+      <button class="btn btn-primary" style="padding:9px 22px;font-size:.85rem;" onclick="filterGallery('all',this)">All</button>
+      <button class="btn btn-outline" style="padding:9px 22px;font-size:.85rem;" onclick="filterGallery('rooms',this)">Rooms</button>
+      <button class="btn btn-outline" style="padding:9px 22px;font-size:.85rem;" onclick="filterGallery('pool',this)">Pool &amp; Grounds</button>
+      <button class="btn btn-outline" style="padding:9px 22px;font-size:.85rem;" onclick="filterGallery('dining',this)">Dining</button>
+      <button class="btn btn-outline" style="padding:9px 22px;font-size:.85rem;" onclick="filterGallery('spa',this)">Spa</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- Rooms -->
+      <div class="gallery-item" data-cat="rooms" onclick="openLightbox('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=90','Deluxe Garden Room')">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/67/98/67/lake-view-from-room.jpg?w=900&h=500&s=1" alt="Deluxe Garden Room" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="rooms" onclick="openLightbox('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=90','Premium Ocean Suite')">
+        <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/room-imgs/201711072041076165-182021-c6d141b7-9fec-402e-ade9-97be983869a0.jpg" alt="Premium Suite" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="rooms" onclick="openLightbox('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&q=90','Presidential Villa')">
+        <img src="https://images.trvl-media.com/lodging/111000000/110550000/110544800/110544750/e54e075a.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Presidential Villa" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <!-- Pool & Grounds -->
+      <div class="gallery-item" data-cat="pool" onclick="openLightbox('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=90','Infinity Pool')">
+        <img src="https://r1imghtlak.mmtcdn.com/7fa4c6a6807b11e99c9e0242ac110003.jpg" alt="Infinity Pool" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="pool" onclick="openLightbox('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&q=90','Resort Gardens')">
+        <img src="https://waterfront-resort.pokharahotelspage.com/data/Pics/OriginalPhoto/4928/492804/492804609/waterfront-resort-by-kgh-group-pokhara-pic-97.JPEG" alt="Resort Gardens" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="pool" onclick="openLightbox('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=90','Resort Exterior')">
+        <img src="https://image.wedmegood.com/resized/720X/uploads/member/25787817/1751370285_Screenshot_75.png" alt="Resort Exterior" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <!-- Dining -->
+      <div class="gallery-item" data-cat="dining" onclick="openLightbox('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=90','Fine Dining')">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/55/4d/41/taal-n-taal-bistro-dining.jpg?w=900&h=500&s=1" alt="Fine Dining" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="dining" onclick="openLightbox('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=90','Gourmet Cuisine')">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/55/4c/b6/dinner-service.jpg" alt="Gourmet Cuisine" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="dining" onclick="openLightbox('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=90','Terrace Dining')">
+        <img src="https://ktmgh.com/waterfront-resort/images/rest4.jpg" alt="Terrace Dining" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <!-- Spa -->
+      <div class="gallery-item" data-cat="spa" onclick="openLightbox('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=90','Spa Treatment')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRil5svj0Lyl1kHjOIW4N5LFS27_5_7vo6hSQ&s" alt="Spa Treatment" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="spa" onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=90','Wellness Lounge')">
+        <img src="https://www.ramadakathmandudhumbarahi.com/images/package/galleryimages/YaBCl-6.jpg" alt="Wellness Lounge" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+      <div class="gallery-item" data-cat="spa" onclick="openLightbox('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=90','Yoga by the Lake')">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/29/c3/a8/da/caption.jpg" alt="Yoga by the Lake" loading="lazy" />
+        <div class="gallery-overlay">🔍</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<!-- ══ CTA ══ -->
+<section style="background:var(--ice);padding:64px 24px;text-align:center;">
+  <h2 style="font-size:2rem;color:var(--teal);margin-bottom:12px;">Love What You See?</h2>
+  <p style="color:#5A8A9A;max-width:480px;margin:0 auto 28px;">Experience it in person — book your stay at Novara today.</p>
+  <button class="btn btn-primary" onclick="handleBookNow()">Book Now</button>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Novara Resort</h3>
+      <p>A sanctuary of luxury and serenity, offering unforgettable experiences in breathtaking surroundings.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+061411255">📞+061-411255</a></li>
+        <li><a href="tel:+9779749431787">📞 +977-9749431787</a></li>
+        <li><a href="mailto:welcome@novararesort.com">✉️ welcome@novararesort.com</a></li>
+        <li><a href="#">📍 Pokhara, Nepal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Novara Resort. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+<script>
+  // Gallery filter
+  function filterGallery(cat, btn) {
+    // Update button styles
+    document.querySelectorAll('.gallery-filter-btn, [onclick^="filterGallery"]').forEach(b => {
+      b.classList.remove('btn-primary');
+      b.classList.add('btn-outline');
+    });
+    btn.classList.remove('btn-outline');
+    btn.classList.add('btn-primary');
+
+    // Show/hide items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
