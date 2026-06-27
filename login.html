@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Novara Resort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-card">
+
+    <div class="login-logo">
+      <h1>Novara Resort<span></span></h1>
+      <p>Pokhara, Nepal · Luxury &amp; Serenity</p>
+    </div>
+
+    <!-- Tab switcher -->
+    <div class="login-tabs">
+      <button class="login-tab active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+      <button class="login-tab" id="tab-register" onclick="switchTab('register')">Create Account</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="form-login">
+      <h2>Welcome back</h2>
+      <div class="form-group">
+        <label for="login-name">Full Name</label>
+        <input type="text" id="login-name" placeholder="Your full name" autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Password</label>
+        <input type="password" id="login-pass" placeholder="Your password" autocomplete="current-password" />
+      </div>
+      <p class="login-error" id="login-error"></p>
+      <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="handleLogin()">Sign In</button>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div id="form-register" style="display:none;">
+      <h2>Create your account</h2>
+      <div class="form-group">
+        <label for="reg-name">Full Name</label>
+        <input type="text" id="reg-name" placeholder="Your full name" autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="reg-pass">Password</label>
+        <input type="password" id="reg-pass" placeholder="Choose a password" autocomplete="new-password" />
+      </div>
+      <div class="form-group">
+        <label for="reg-pass2">Confirm Password</label>
+        <input type="password" id="reg-pass2" placeholder="Repeat password" autocomplete="new-password" />
+      </div>
+      <p class="login-error" id="reg-error"></p>
+      <button class="btn btn-green" style="width:100%;margin-top:8px;" onclick="handleRegister()">Create Account</button>
+    </div>
+
+    <p class="login-back"><a href="index.html">← Back to Home</a></p>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
