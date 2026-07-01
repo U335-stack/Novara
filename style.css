@@ -193,7 +193,7 @@ footer {
 .btn-green:hover { background: var(--green-light); }
 .btn-outline {
   background: transparent;
-  color: var(--teal);
+  color: var(--white);
   border: 2px solid var(--teal);
 }
 .btn-outline:hover { background: var(--teal); color: var(--white); }
